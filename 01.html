@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        123
+    </div>
+    <script>
+        var str = '12374185296322587456321450'
+        var obj = {};
+        var outKey = ''
+        var outNumber = 0;
+        var outStr = []
+        for(var i = 0; i < str.length; i++){
+            var num = str[i];
+            obj[num] =  obj[num] ?  obj[num] + 1 : 1
+        }
+        // console.log(obj);
+        for (var key in obj){
+            outStr.push(key);
+            var num = obj[key];
+            if(outNumber < obj[key]){
+                outNumber = obj[key]
+                outKey = key
+            }
+        }
+        console.log('出现最多的数是：' + outKey , '出现的次数是' + outNumber);
+        console.log(outStr.join(''));
+        // var obj = {};
+        // var outKey = '';
+        // var outNumer = 0;
+        // var outStr = [];
+        // for(var i = 0; i < str.length; i++){
+        //     var num = str[i];
+        //     obj[num] = obj[num] ? obj[num] + 1 : 1
+        // }
+        // console.log(obj);
+        // for(var key in obj){
+        //     outStr.push(key);
+        //     var num = obj[key];
+        //     if(outNumer < obj[key]){
+        //         outNumer = obj[key];
+        //         outKey = key;
+        //     }
+        // }
+        // console.log('出现最多的数是：' + outKey , '出现的次数是' + outNumer);
+        // console.log(outStr.join(''));
+    </script>
+</body>
+</html>
